@@ -1,0 +1,33 @@
+{
+    "name": "basics",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "prestart": "node buildScripts/startMessage",
+        "start": "npm-run-all --parallel  security-check open:src",
+        "security-check": "npm audit",
+        "open:src": "nodemon buildScripts/server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alkakoma/basics.git"
+    },
+    "keywords": [],
+    "author": "Christian Makabu <christianmakabu@yahoo.fr>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/alkakoma/basics/issues"
+    },
+    "homepage": "https://github.com/alkakoma/basics#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "chalk": "^3.0.0",
+        "express": "^4.17.1",
+        "mocha": "^6.2.2",
+        "nodemon": "^2.0.2",
+        "npm-run-all": "^4.1.5",
+        "path": "^0.12.7"
+    }
+}
